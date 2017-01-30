@@ -4,20 +4,21 @@ module.exports = (grunt) => {
   grunt.initConfig({
     sass: {
       options: {
-        sourceMap: true
+        sourceMap: true,
+        outputStyle: 'compressed',
       },
       dist: {
         files: {
-          'main.css': 'main.scss'
+          'styles/main.css': 'styles/main.scss'
         }
-      }
-    }
+      },
+    },
   });
 
   // Load the grunt plugins
   grunt.loadNpmTasks('grunt-sass');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['sass']);
 
 };
