@@ -10,12 +10,21 @@ module.exports = (grunt) => {
       dist: {
         files: {
           'styles/main.css': 'styles/main.scss'
-        }
+        },
+      },
+    },
+    watch: {
+      sass: {
+        files: '**/*.scss',
+        tasks: ['sass'],
       },
     },
   });
 
+//try these: uglify, concat (js), jshint
+
   // Load the grunt plugins
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
 
   // Default task(s).
