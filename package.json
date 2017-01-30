@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Jufebrown/modern-javascript-tools#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-sass": "^2.0.0",
     "node-sass": "^4.4.0"
   }
 }
